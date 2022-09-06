@@ -20,7 +20,7 @@ body {
   font-size: 18px;
 }
 .main_container {
-  margin: 8.125rem 0;
+  margin: 8.125rem auto;
   width: 100%;
 }
 .logo_container {
@@ -48,7 +48,7 @@ h1 {
 p {
   color: var(--grayishBlue);
 }
-.description_container p {
+.description_container p{
   color: var(--grayishBlue);
   font-size: 1.3rem;
   font-weight: 400;
@@ -92,7 +92,6 @@ h2 {
   width: 50%;
 }
 .secondary_container {
-  align-self: center;
   display: flex;
   flex-direction: row;
   height: 570px;
@@ -221,4 +220,99 @@ h2 {
 }
 .attribution a { 
   color: hsl(228, 45%, 44%); 
+}
+/* Mobile Design */
+@media screen and (max-width: 768px) {
+  body{
+    background-image: url('../src/img/bg-header-mobile.png');
+    width: 100%;
+  }
+  .main_container {
+    margin: 7.5rem auto;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .description_container p, .description_paragraph{
+    font-size: 1.1rem;
+    width: 90%;
+  }
+  .btn_container {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 25px;
+    justify-content: center;
+  }
+  .btn_container input {
+    width: 90%;
+  }
+  .btn_Mac {
+    margin: 0;
+  }
+  .secondary_container {
+    flex-flow: column nowrap;
+    gap: 60px;
+    height: auto;
+  }
+  .image_container--Services {
+    background-position: center;
+    background-size: contain;
+    height: 240px;
+    width: 100%;
+  }
+  .description {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+  }
+  .content {
+    width: 80%;
+  }
+  .image_container--Access {
+    background-size: contain;
+    height: 180px;
+  }
+  .characteristics_container {
+    width: 80%;
+  }
+  .characteristics {
+    align-items: center;
+    flex-flow: column nowrap;
+    gap: 90px;
+    padding: 0;
+  }
+  .characteristics > div {
+    width: inherit;
+  }
+  .logos {
+    flex-flow: column nowrap;
+    gap: 60px;
+  }
+  .download_container p {
+    width: 90%;
+  }
+  .footer_container {
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 2fr 1fr;
+    height: 500px;
+  }
+  .logo_footer {
+    margin: 0 auto;
+  }
+  .links_container {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(6, 1fr);
+    height: auto;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+  }
+  .logo_social {
+    width: 90%;
+  }
 }
